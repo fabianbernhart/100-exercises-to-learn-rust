@@ -38,12 +38,24 @@ impl Ticket {
         &self.title
     }
 
+    pub fn set_title(&mut self, str: String) {
+        self.title = str;
+    }
+
     pub fn description(&self) -> &String {
         &self.description
     }
 
+    pub fn set_description(&mut self, str: String) {
+        self.title = str;
+    }
+
     pub fn status(&self) -> &String {
         &self.status
+    }
+
+    pub fn set_status(&mut self, str: String) {
+        self.title = str;
     }
 }
 
