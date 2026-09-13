@@ -1,4 +1,8 @@
+use crate::Shape::Circle;
+
+#[derive(Debug, PartialEq)]
 enum Shape {
+    Test,
     Circle { radius: f64 },
     Square { border: f64 },
     Rectangle { width: f64, height: f64 },
@@ -7,8 +11,12 @@ enum Shape {
 impl Shape {
     // TODO: Implement the `radius` method using
     //  either an `if let` or a `let/else`.
-    pub fn radius(&self) -> f64 {
-        todo!()
+    pub fn radius(self) -> f64 {
+        let Shape::Circle { radius } = self else {
+            panic!("Only Circles have an radius")
+        };
+
+        radius
     }
 }
 
