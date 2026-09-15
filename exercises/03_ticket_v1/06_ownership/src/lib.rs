@@ -3,8 +3,6 @@
 //   Change the existing implementation of `Ticket`'s accessor methods to take a reference
 //   to `self` as an argument, rather than taking ownership of it.
 
-use std::mem::type_info::Str;
-
 pub struct Ticket {
     title: String,
     description: String,
